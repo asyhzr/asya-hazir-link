@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#06081a"/>
+    <stop offset=".42" stop-color="#10113b"/>
+    <stop offset=".72" stop-color="#442060"/>
+    <stop offset="1" stop-color="#12091f"/>
+  </linearGradient>
+  <radialGradient id="sun" cx="50%" cy="68%" r="30%">
+    <stop offset="0" stop-color="#ff79b8" stop-opacity=".8"/>
+    <stop offset=".35" stop-color="#ff4f9f" stop-opacity=".35"/>
+    <stop offset="1" stop-color="#ff4f9f" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="grid" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff4aa9" stop-opacity=".15"/>
+    <stop offset="1" stop-color="#8b4dff" stop-opacity=".03"/>
+  </linearGradient>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="7" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+<rect width="1600" height="1000" fill="url(#sky)"/>
+<rect width="1600" height="1000" fill="url(#sun)"/>
+
+<!-- subtle stars -->
+<g fill="#b7b5ff" opacity=".55">
+  <circle cx="160" cy="145" r="2"/><circle cx="330" cy="220" r="1.5"/>
+  <circle cx="1210" cy="150" r="2"/><circle cx="1410" cy="260" r="1.5"/>
+  <circle cx="980" cy="105" r="1.5"/><circle cx="720" cy="185" r="1.2"/>
+</g>
+
+<!-- distant neon horizon -->
+<path d="M0 720 Q400 660 800 720 T1600 700 L1600 1000 L0 1000Z" fill="#090716"/>
+<path d="M0 735 Q400 675 800 735 T1600 715" fill="none" stroke="#ff3fa2" stroke-width="3" opacity=".5" filter="url(#glow)"/>
+
+<!-- perspective road grid -->
+<g stroke="url(#grid)" fill="none" opacity=".8">
+  <path d="M800 710 L100 1000"/><path d="M800 710 L300 1000"/>
+  <path d="M800 710 L500 1000"/><path d="M800 710 L650 1000"/>
+  <path d="M800 710 L950 1000"/><path d="M800 710 L1100 1000"/>
+  <path d="M800 710 L1300 1000"/><path d="M800 710 L1500 1000"/>
+  <path d="M500 780 H1100"/><path d="M350 840 H1250"/>
+  <path d="M180 920 H1420"/>
+</g>
+
+<!-- left palm -->
+<g fill="#050519" stroke="#11103c" stroke-width="2">
+  <path d="M205 735 C225 610 245 480 250 360 C254 290 245 235 235 190 C226 155 240 130 263 145 C286 160 276 220 272 265 C266 340 275 430 285 500 C296 580 304 655 300 735Z"/>
+  <path d="M255 175 C180 130 125 130 72 154 C125 92 205 99 260 145Z"/>
+  <path d="M255 178 C180 180 120 210 80 255 C150 235 215 215 270 195Z"/>
+  <path d="M260 174 C300 105 350 80 405 75 C355 130 320 165 275 190Z"/>
+  <path d="M265 185 C340 155 420 160 475 185 C395 190 330 200 270 200Z"/>
+  <path d="M250 180 C220 105 225 55 250 18 C276 78 278 125 267 178Z"/>
+  <path d="M250 190 C175 100 105 72 45 72 C110 135 165 170 250 205Z"/>
+</g>
+
+<!-- right palm -->
+<g fill="#050519" stroke="#11103c" stroke-width="2">
+  <path d="M1350 760 C1320 620 1305 500 1320 375 C1330 300 1350 250 1365 215 C1378 185 1400 185 1410 205 C1420 225 1395 275 1388 330 C1375 430 1385 560 1410 760Z"/>
+  <path d="M1380 225 C1310 170 1250 170 1185 190 C1245 125 1320 135 1385 200Z"/>
+  <path d="M1380 230 C1305 225 1245 250 1190 290 C1260 280 1325 265 1390 245Z"/>
+  <path d="M1385 225 C1415 140 1460 100 1510 85 C1470 150 1445 190 1400 240Z"/>
+  <path d="M1390 235 C1460 200 1530 205 1590 235 C1515 245 1455 250 1390 250Z"/>
+  <path d="M1380 225 C1360 140 1370 80 1400 35 C1420 110 1410 165 1395 225Z"/>
+  <path d="M1380 240 C1320 145 1250 105 1190 100 C1250 165 1305 210 1385 255Z"/>
+</g>
+
+<!-- foreground palm silhouettes -->
+<g fill="#030311" opacity=".9">
+  <path d="M40 1000 C65 820 100 720 130 640 C150 585 185 570 200 590 C214 610 188 655 170 705 C130 820 110 900 105 1000Z"/>
+  <path d="M125 650 Q80 570 15 545 Q90 535 150 590 Q130 515 150 455 Q190 530 170 615 Q220 545 285 535 Q245 600 175 650Z"/>
+  <path d="M1460 1000 C1450 850 1420 750 1395 665 C1380 615 1400 590 1425 605 C1450 620 1455 675 1470 730 C1495 820 1520 900 1530 1000Z"/>
+  <path d="M1415 635 Q1360 555 1300 545 Q1360 520 1425 580 Q1400 500 1425 440 Q1460 520 1440 595 Q1490 530 1555 535 Q1515 600 1440 645Z"/>
+</g>
+
+<!-- neon horizon line -->
+<rect x="0" y="716" width="1600" height="2" fill="#ff4ca8" opacity=".65" filter="url(#glow)"/>
+</svg>
